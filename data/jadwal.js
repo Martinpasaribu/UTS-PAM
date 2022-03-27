@@ -1,134 +1,114 @@
-const BANDARA = [
+const PELABUHAN = [
+
   {
-    bandara_id: "B-001",
-    bandara_nama: 'Saber', 
+    pelabuhan_id: "B-1",
+    pelabuhan_nama: 'Bakauheni', 
+  },
+
+  {
+    pelabuhan_id: "B-2",
+    pelabuhan_nama: 'Merak',
+  },
+
+  {
+    pelabuhan_id: "B-3",
+    pelabuhan_nama: 'Tanjung Priok',
   },
   {
-    bandara_id: "B-002",
-    bandara_nama: 'Yuzong',
+    pelabuhan_id: "B-4",
+    pelabuhan_nama: 'Panjang',
   },
   {
-    bandara_id: "B-003",
-    bandara_nama: 'Lancelot',
+    pelabuhan_id: "B-5",
+    pelabuhan_nama: 'Surabaya',
   },
-  {
-    bandara_id: "B-004",
-    bandara_nama: 'hilda',
-  },
-  {
-   bandara_id: "B-005",
-   bandara_nama: 'freya',
-  },
+
+ 
 ];
 
-const MASKAPAI = [
-  {
-    maskapai_id: "M-001",
-    maskapai_nama: "ml Air", 
-  },
-  {
-    maskapai_id: "M-002",
-    maskapai_nama: "ff Air",
-  },
-  {
-    maskapai_id: "M-003",
-    maskapai_nama: "domino Air",
-  },
-  {
-    maskapai_id: "M-004",
-    maskapai_nama: "coc Air",
-  },
-  {
-    maskapai_id: "M-005",
-    maskapai_nama: "aov Air",
-  },
+
+
+
+const KELAS = [
+{
+  kelas_id: "E-1",
+  
+  jenis_kelas:'Ekonomi',
+},
+{
+  Kelas_id:'E-2',
+  jenis_kelas: 'Executive',
+},
+{
+  Kelas_id:'E-3',
+  jenis_kelas: 'Bisnis',
+
+},
 ];
 
+
+
+  
 const JADWAL = [
-  {
-    jadwal_id: "J-001",
-    bandara_id_keberangkatan: "B-001",
-    bandara_id_kedatangan: "B-002",
-    maskapai_id: "M-001",
-    tanggal: "2022-08-10",
-  },
-  {
-    jadwal_id: "J-002",
-    bandara_id_keberangkatan: "B-003",
-    bandara_id_kedatangan: "B-004",
-    maskapai_id: "M-002",
-    tanggal: "2022-08-11",
-  },
-  {
-   jadwal_id: "J-003",
-   bandara_id_keberangkatan: "B-005",
-   bandara_id_kedatangan: "B-001",
-   maskapai_id: "M-003",
-   tanggal: "2022-08-10",
-  },
-  {
-   jadwal_id: "J-004",
-   bandara_id_keberangkatan: "B-003",
-   bandara_id_kedatangan: "B-001",
-   maskapai_id: "M-004",
-   tanggal: "2022-08-11",
-  },
-  {
-    jadwal_id: "J-005",
-    bandara_id_keberangkatan: "B-002",
-    bandara_id_kedatangan: "B-001",
-    maskapai_id: "M-002",
-    tanggal: "2022-08-10",
-  },
-  {
-    jadwal_id: "J-006",
-    bandara_id_keberangkatan: "B-001",
-    bandara_id_kedatangan: "B-003",
-    maskapai_id: "M-002",
-    tanggal: "2022-08-11",
-  },
-  {
-    jadwal_id: "J-007",
-    bandara_id_keberangkatan: "B-002",
-    bandara_id_kedatangan: "B04",
-    maskapai_id: "M-004",
-    tanggal: "2022-08-10",
-  },
-  {
-    jadwal_id: "J-008",
-    bandara_id_keberangkatan: "B-005",
-    bandara_id_kedatangan: "B-002",
-    maskapai_id: "M-005",
-    tanggal: "2022-08-11",
-  },
-  {
-    jadwal_id: "J-009",
-    bandara_id_keberangkatan: "B-001",
-    bandara_id_kedatangan: "B-002",
-    maskapai_id: "M-005",
-    tanggal: "2022-08-10",
-  },
-  {
-    jadwal_id: "J-010",
-    bandara_id_keberangkatan: "B-002",
-    bandara_id_kedatangan: "B-005",
-    maskapai_id: "M-001",
-    tanggal: "2022-08-11",
-  },
-  {
-    jadwal_id: "J-011",
-    bandara_id_keberangkatan: "B-001",
-    bandara_id_kedatangan: "B-002",
-    maskapai_id: "M-004",
-    tanggal: "2022-08-10",
-  },
-  {
-    jadwal_id: "J-012",
-    bandara_id_keberangkatan: "B-002",
-    bandara_id_kedatangan: "B-001",
-    maskapai_id: "M-005",
-    tanggal: "2022-08-11",
-  },
-];
 
-export {BANDARA, MASKAPAI, JADWAL};
+  {
+    jadwal_id: "J-1",
+    pelabuhan_id_keberangkatan: "B-1",
+    pelabuhan_id_kedatangan: "B-2",
+    
+    kelas_id: "E-1",
+    jam: "12.00",
+    tanggal: "1",
+    jumlah:"1"
+  },
+
+  {
+    jadwal_id: "J-2",
+    pelabuhan_id_keberangkatan: "B-1",
+    pelabuhan_id_kedatangan: "B-3",
+   
+    kelas_id: "E-2",
+    jam: "12.00",
+    tanggal: "2",
+    jumlah:"2"
+  },
+
+  {
+    jadwal_id: "J-3",
+    pelabuhan_id_keberangkatan: "B-1",
+    pelabuhan_id_kedatangan: "B-4",
+   
+    kelas_id: "E-2",
+    jam: "07.00",
+    tanggal: "4",
+    jumlah:"1"
+  },
+
+
+  {
+    jadwal_id: "J-4",
+    pelabuhan_id_keberangkatan: "B-2",
+    pelabuhan_id_kedatangan: "B-2",
+   
+    kelas_id: "E-3",
+    jam: "15.00",
+    tanggal: "3",
+    jumlah:"2"
+  },
+
+
+  {
+    jadwal_id: "J-5",
+    pelabuhan_id_keberangkatan: "B-2",
+    pelabuhan_id_kedatangan: "B-1",
+   
+    kelas_id: "E-3",
+    jam: "07.00",
+    tanggal: "5",
+    jumlah:"1"
+  },
+
+
+];
+  
+export {PELABUHAN, JADWAL,KELAS};

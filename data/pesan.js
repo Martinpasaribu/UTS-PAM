@@ -3,6 +3,8 @@
 
 import React from 'react';
 import { FlatList, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+
+
 import { FontAwesome5,FontAwesome, Ionicons, Fontisto } from '@expo/vector-icons';
 
 import { PELABUHAN, JADWAL,KELAS } from '../data/jadwal';
@@ -12,13 +14,15 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
 
-const layar2 = ({navigation, route}) => {
+
+const pesan = ({navigation, route}) => {
 
   function NoFlight() {
     return (        
       <Text style={styles.empty}>Hasil Pencarian Tidak Ditemukan</Text>  
     );
   }
+
 
   function ListJadwal(result){
     return (
@@ -94,6 +98,7 @@ const layar2 = ({navigation, route}) => {
       />
     );
   }
+
 
   function CardList(){
 
@@ -182,275 +187,322 @@ const layar2 = ({navigation, route}) => {
     
   )
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  return (
+
+    <View style={styles.container} >
+
+      <View style={styles.header_list}>
+
+        <View style={styles.head_item}>
+        
+        </View>
+
+      </View>
+
+    
+      <View style={styles.card_item3}>
+      <TouchableOpacity onPress={ () => navigation.goBack() }>
+      <Text style={styles.button_text}>Kembali</Text>
+
+
+
+      </TouchableOpacity>
+     
+      </View>
+
+
+
+   
+
+    
+    </View>
+
+    
+  )
 }
 
+
+  
 const styles = StyleSheet.create({
 
 
-  bottom_navigation:{
-    position:'absolute',
-    bottom:0,
-    flexDirection:'row',
-    backgroundColor: '#f2f2f2',
-    width: '100%',
-    height: '7  %',
-    alignContent: 'center',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    borderTopWidth: 2,
-    borderColor: '#cfcfcf',
-},
-
-  button_text:{
-    textAlign: 'center',
-    paddingTop: '6%',
-    fontSize: 18,
-    color: 'blue',
-    fontWeight: 'bold',
+    bottom_navigation:{
+      position:'absolute',
+      bottom:0,
+      flexDirection:'row',
+      backgroundColor: '#f2f2f2',
+      width: '100%',
+      height: '7  %',
+      alignContent: 'center',
+      alignItems: 'center',
+      justifyContent: 'space-around',
+      borderTopWidth: 2,
+      borderColor: '#cfcfcf',
   },
-  button_text2:{
-    textAlign: 'center',
   
-    marginTop: '6%',
-    fontSize: 18,
-    left: '13%',
-    marginRight: '24%',
-    color: 'white',
-    fontWeight: 'bold',
-  },
-
-
-
-  flat:{
-    backgroundColor: 'white',
-    width: '90%',
-    height: '71%',
-   marginTop: '-10%',
-   marginBottom: '1%',
-   
-    alignSelf: 'center',
+    button_text:{
+      textAlign: 'center',
+      paddingTop: '6%',
+      fontSize: 18,
+      color: 'blue',
+      fontWeight: 'bold',
+    },
+    button_text2:{
+      textAlign: 'center',
     
-   
-  },
-
-  form_input:{
-    backgroundColor: 'white',
-    width: '85%',
-    height: '77%',
-    borderRadius: 15,
-    position: 'absolute',
-    alignSelf: 'center',
-    marginTop: '28%',
-    elevation: 3,
-  },
-
-  container:{
-    flex: 1,
-    backgroundColor: '#dcdcdc',
-    
-
-  },
-
-  header_list:{
-    width: '100%',
-    height: '23%',
-    backgroundColor: '#dcdcdc',
-    borderBottomLeftRadius: 10.,
-    borderBottomRightRadius: 10,
-  },
-
-  head_tombol_item:{
-    textAlign: 'center',
-    paddingTop: '34%',
-    left: '10%',
-    fontSize: 30,
-    color: 'white',
+      marginTop: '6%',
+      fontSize: 18,
+      left: '13%',
+      marginRight: '24%',
+      color: 'white',
+      fontWeight: 'bold',
+    },
   
-    fontWeight: 'bold'
-  },
-
-
-  head_item:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignContent: 'center',
-    justifyContent: 'space-between',
-    marginLeft: '5%',
-    marginRight: '5%',
-    marginTop: '15%'
-  },
-
-  head_title2:{
-    alignSelf: 'center',
-    fontSize:28,
-    color: '#4682B4',
-    marginTop: '14%',
-    fontWeight: 'bold',
-  },
-
-  title_list:{
-    alignContent: 'center',
-    alignItems: 'center',
-    marginTop: '8%'
-  },
-
-  list_title:{
-    color: 'white',
-    fontSize: 20,
-    marginTop:2,
-  },
-
-  footer:{
-    position: 'absolute',
-    marginTop:'10%',
-    bottom: 20,
-    width: '100%'
-  },
-
-  copyright:{ 
-    color: '#828282',
-    textAlign: 'center',
-    fontSize: 15,
-  },
-
-  card:{ 
-    marginTop: '2%',
-    alignItems: 'center',
-    marginHorizontal:'2%'
-  },
-
-  card_item:{
-    right: '5%',
-    
-    backgroundColor: '#dcdcdc',
-    height: '100%',
-    width: '98%',
-    marginTop: "10%",
-    marginBottom: "6%",
-    marginHorizontal: 19,
-    marginVertical: 40,
-    
-  },
-  card_item2:{
-    backgroundColor: 'blue',
-    
-    height: '6%',
-    left: '47%',
-    right: '-34%',
-    width: '34%',
-    marginTop: "-24%",
-    marginBottom: "12%",
-    marginLeft: '7%',
-    marginHorizontal: 2,
-    marginVertical: 1,
-    
-  },
-
-  card_item3:{
-    backgroundColor: '#dcdcdc',
-    borderColor: 'blue',
-    height: '6%',
-    right: '-11%',
-    width: '34%',
-    marginTop: "-19%",
-    marginBottom: "12%",
-    marginHorizontal: 2,
-    marginVertical: 1,
-    
-  },
-
-  top_text1:{
-    fontSize:12,
-    marginTop: "10%",
-    fontWeight: 'bold',
-  },
-  top_text2:{
-    fontSize:14,
-    marginTop: "5%",
-    fontWeight: 'bold',
-  },
-  top_text3:{
-    fontSize:14,
-    marginTop: "20%",
-    fontWeight: 'bold',
-  },
-  top_text4:{
-    fontSize:14,
-    marginTop: "5%",
-    fontWeight: 'bold',
-  },
-
-  top_text5:{
-    fontSize:23,
-    marginBottom: "2%",
-    marginTop: "-11%",
-    fontWeight: 'bold',
-  },
-
-  top_item:{
-    marginLeft: '4%',
-    marginTop: '4%',
-  },
-
-  top_text:{
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-
-  top_text13:{
-    fontSize: 15,
-    marginTop: '1%',
-    fontWeight: 'bold',
-    marginBottom: '8%',
-  },
-
-  top_text12:{
-    fontSize: 18,
-    marginTop: '1%',
-    fontWeight: 'bold',
-    marginBottom: '8%',
-  },
-
   
-
-  bottom_item_left:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginLeft: '4%',
-  },
-
-  bottom_item_right:{
+  
+    flat:{
+      backgroundColor: 'white',
+      width: '90%',
+      height: '71%',
+     marginTop: '-10%',
+     marginBottom: '1%',
+     
+      alignSelf: 'center',
+      
+     
+    },
+  
+    form_input:{
+      backgroundColor: 'white',
+      width: '85%',
+      height: '77%',
+      borderRadius: 15,
+      position: 'absolute',
+      alignSelf: 'center',
+      marginTop: '28%',
+      elevation: 3,
+    },
+  
+    container:{
+      flex: 1,
+      backgroundColor: '#dcdcdc',
+      
+  
+    },
+  
+    header_list:{
+      width: '100%',
+      height: '23%',
+      backgroundColor: '#dcdcdc',
+      borderBottomLeftRadius: 10.,
+      borderBottomRightRadius: 10,
+    },
+  
+    head_tombol_item:{
+      textAlign: 'center',
+      paddingTop: '34%',
+      left: '10%',
+      fontSize: 30,
+      color: 'white',
+    
+      fontWeight: 'bold'
+    },
+  
+  
+    head_item:{
       flexDirection: 'row',
       alignItems: 'center',
-      marginRight: '20%',
- marginLeft: '4%',
+      alignContent: 'center',
+      justifyContent: 'space-between',
+      marginLeft: '5%',
+      marginRight: '5%',
+      marginTop: '15%'
+    },
+  
+    head_title2:{
+      alignSelf: 'center',
+      fontSize:28,
+      color: '#4682B4',
+      marginTop: '14%',
+      fontWeight: 'bold',
+    },
+  
+    title_list:{
+      alignContent: 'center',
+      alignItems: 'center',
+      marginTop: '8%'
+    },
+  
+    list_title:{
+      color: 'white',
+      fontSize: 20,
+      marginTop:2,
+    },
+  
+    footer:{
+      position: 'absolute',
+      marginTop:'10%',
+      bottom: 20,
+      width: '100%'
+    },
+  
+    copyright:{ 
+      color: '#828282',
+      textAlign: 'center',
       fontSize: 15,
-      marginTop: '3%',
+    },
+  
+    card:{ 
+      marginTop: '2%',
+      alignItems: 'center',
+      marginHorizontal:'2%'
+    },
+  
+    card_item:{
+      right: '5%',
+      
+      backgroundColor: '#dcdcdc',
+      height: '100%',
+      width: '98%',
+      marginTop: "10%",
+      marginBottom: "6%",
+      marginHorizontal: 19,
+      marginVertical: 40,
+      
+    },
+    card_item2:{
+      backgroundColor: 'blue',
+      
+      height: '6%',
+      left: '47%',
+      right: '-34%',
+      width: '34%',
+      marginTop: "-24%",
+      marginBottom: "12%",
+      marginLeft: '7%',
+      marginHorizontal: 2,
+      marginVertical: 1,
+      
+    },
+  
+    card_item3:{
+      backgroundColor: '#dcdcdc',
+      borderColor: 'blue',
+      height: '6%',
+      right: '-11%',
+      width: '34%',
+      marginTop: "-19%",
+      marginBottom: "12%",
+      marginHorizontal: 2,
+      marginVertical: 1,
+      
+    },
+  
+    top_text1:{
+      fontSize:12,
+      marginTop: "10%",
+      fontWeight: 'bold',
+    },
+    top_text2:{
+      fontSize:14,
+      marginTop: "5%",
+      fontWeight: 'bold',
+    },
+    top_text3:{
+      fontSize:14,
+      marginTop: "20%",
+      fontWeight: 'bold',
+    },
+    top_text4:{
+      fontSize:14,
+      marginTop: "5%",
+      fontWeight: 'bold',
+    },
+  
+    top_text5:{
+      fontSize:23,
+      marginBottom: "2%",
+      marginTop: "-11%",
+      fontWeight: 'bold',
+    },
+  
+    top_item:{
+      marginLeft: '4%',
+      marginTop: '4%',
+    },
+  
+    top_text:{
+      fontSize: 20,
+      fontWeight: 'bold',
+    },
+  
+    top_text13:{
+      fontSize: 15,
+      marginTop: '1%',
+      fontWeight: 'bold',
+      marginBottom: '8%',
+    },
+  
+    top_text12:{
+      fontSize: 18,
+      marginTop: '1%',
+      fontWeight: 'bold',
+      marginBottom: '8%',
+    },
+  
+    
+  
+    bottom_item_left:{
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginLeft: '4%',
+    },
+  
+    bottom_item_right:{
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginRight: '20%',
+   marginLeft: '4%',
+        fontSize: 15,
+        marginTop: '3%',
+        color: 'black'
+    },
+    bottom_item_right2:{
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginRight: '5%',
+      fontSize: 15,
+      marginTop: '-1%',
       color: 'black'
   },
-  bottom_item_right2:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginRight: '5%',
-    fontSize: 15,
-    marginTop: '-1%',
-    color: 'black'
-},
-
-
-
-  left_text:{
-      fontSize: 24,
-      fontWeight: 'bold',
-      marginLeft: '2%'
-  },
   
-  empty:{
-    fontSize:18,
-    marginTop:'50%'
-  },
+  
+  
+    left_text:{
+        fontSize: 24,
+        fontWeight: 'bold',
+        marginLeft: '2%'
+    },
+    
+    empty:{
+      fontSize:18,
+      marginTop:'50%'
+    },
+  
+} 
+);
 
-});
-
-
-export default layar2;
+export default pesan;
